@@ -1,10 +1,12 @@
 
 var officersModel = Backbone.Model.extend({
-    urlRoot: 'localhost:3003/officers'
+    urlRoot: 'http://localhost/officers'
 });
 
+anOfficer = new officersModel();
 
 $(document).ready(function(){
-	var anOfficer = new officersModel({id: 'abcd1234'});
 	anOfficer.fetch();
+	console.log('Model Fetched');
 });
+
